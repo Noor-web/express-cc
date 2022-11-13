@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Polls page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 my-5">
+            <div class="card card-body">
+
+                <h5>Your All Polls</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                        <% for (let p of polls) { %>
+                        <a href="./polls/<%= p._id %>">
+                            <%= p.title %>
+                        </a>
+                        </li>
+                    <% } %>
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
